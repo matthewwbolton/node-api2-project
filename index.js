@@ -5,6 +5,8 @@ const server = express();
 
 const port = 8000;
 
+server.use(express.json());
+
 server.use("/api/posts", postsRouter);
 
 server.use("/", (req, res) => {
